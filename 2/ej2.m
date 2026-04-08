@@ -5,7 +5,7 @@
 fm = 1000;  % Frecuencia de muestreo fija por consigna
 tini = -1;
 tfin = 1;
-fs = 5;   % Respeta 2*fs <= fm
+fs = 5;     % Respeta 2*fs <= fm
 fase = 0;
 
 [y,t] = generar_senoidal(fs,fm,fase,tini,tfin);
@@ -15,7 +15,7 @@ y_inv = operacion_dominio(t, fs, fase, alpha_inv);
 
 [y_rect,t_rect] = rectificacion(y,t);
 
-N=5;
+N=8;
 [y_cuant,t_cuant] = cuantizacion(y,t,N);
 
 figure(1); plot(t,y); title('Original');
