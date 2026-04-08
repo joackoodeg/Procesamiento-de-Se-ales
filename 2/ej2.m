@@ -11,7 +11,7 @@ fase = 0;
 [y,t] = generar_senoidal(fs,fm,fase,tini,tfin);
 
 alpha_inv = -1;
-y_invertida = operacion_dominio(t, fs, fase, alpha_inv);
+y_inv = operacion_dominio(t, fs, fase, alpha_inv);
 
 [y_rect,t_rect] = rectificacion(y,t);
 
@@ -19,7 +19,7 @@ N=5;
 [y_cuant,t_cuant] = cuantizacion(y,t,N);
 
 figure(1); plot(t,y); title('Original');
-figure(2); plot(t_inv,y_inv); title('Invertida');
+figure(2); plot(t,y_inv); title('Invertida');
 figure(3); plot(t_rect,y_rect); title('Rectificada');
 figure(4); plot(t_cuant,y_cuant); title('Cuantizada');
 
