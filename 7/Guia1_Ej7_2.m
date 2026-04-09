@@ -1,6 +1,3 @@
-close all;
-graphics_toolkit("gnuplot"); # EVITA QUE ME CRASHEE
-
 N = 10000; # Nro de muestras temporales
 M = 5000;   # Nro de realizaciones (señales independientes)
 
@@ -27,7 +24,7 @@ plot(varianza_ensamble);
 ylim([0.5 1.5]);
 
 # ERGODICIDAD
-# Tomamos una realización cualquiera, ej fila 5
+# Tomamos una reallizacion cualquiera, ej fila 5
 realizacion_1 = X(5, :);
 media_temporal = mean(realizacion_1);
 varianza_temporal = var(realizacion_1);
@@ -40,8 +37,8 @@ muestras_vector = 10:5:N;
 media_convergencia_N = zeros(1, length(muestras_vector));
 varianza_convergencia_N = zeros(1, length(muestras_vector));
 
+# Calculamos aumentando iterativamente la cantidad de muestras
 for i = 1:length(muestras_vector)
-    # Calculamos aumentando iterativamente la cantidad de muestras
     datos_parciales = realizacion_1(1:muestras_vector(i));
     media_convergencia_N(i) = mean(datos_parciales);
     varianza_convergencia_N(i) = var(datos_parciales);
@@ -67,8 +64,8 @@ realizaciones_vector = 10:5:M;
 media_convergencia_M = zeros(1, length(realizaciones_vector));
 varianza_convergencia_M = zeros(1, length(realizaciones_vector));
 
+# Calculamos aumentando iterativamente la cantidad de realizaciones
 for i = 1:length(realizaciones_vector)
-    # Calculamos aumentando iterativamente la cantidad de realizaciones
     datos_parciales_M = instante_n(1:realizaciones_vector(i));
     media_convergencia_M(i) = mean(datos_parciales_M);
     varianza_convergencia_M(i) = var(datos_parciales_M, 0);

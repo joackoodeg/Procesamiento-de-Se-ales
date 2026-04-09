@@ -66,12 +66,13 @@ function ej8()
 
     subplot(3,1,2);
     plot(t, y, 'k');
+    ylim([-5, 5]);
     title(sprintf('Señal + Ruido (SNR = %.2f dB)', SNR_db));
     grid on;
 
     subplot(3,1,3);
     plot(t, y_0db, 'r');
+    ylim([-5, 5]);
     title(sprintf('Señal + Ruido forzado a 0 dB (k = %.2f)', k_0db));
-    xlabel('Tiempo (s)');
     grid on;
 endfunction
