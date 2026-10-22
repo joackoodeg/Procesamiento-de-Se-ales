@@ -1,0 +1,11 @@
+# Octave
+octave-workspace
+*.asv
+
+# MATLAB
+*.mat
+*.m~
+
+# OS
+.DS_Store
+Thumbs.db
