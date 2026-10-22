@@ -16,6 +16,15 @@ Scripts de [Octave](https://octave.org/) / MATLAB resueltos a lo largo del curso
 | [`ejercicio-7/`](guia-1/ejercicio-7) | Señales aleatorias: generación de ruido gaussiano y estadísticas de ensamble (media y varianza). |
 | [`ejercicio-8/`](guia-1/ejercicio-8) | Relación señal-ruido (SNR): generación de ruido y cálculo de potencias. |
 
+## Guía 2 — Convolución y sistemas LTI
+
+| Ejercicio | Tema |
+|---|---|
+| [`ejercicio-1/`](guia-2/ejercicio-1) | Convolución lineal: implementación manual y comparación con `conv()` y `filter()`. |
+| [`ejercicio-2/`](guia-2/ejercicio-2) | Convolución circular implementada manualmente. |
+| [`ejercicio-3/`](guia-2/ejercicio-3) | Sistemas LTI en cascada: verificación de la propiedad conmutativa. |
+| [`integrador/`](guia-2/integrador) | Respuesta al impulso de un sistema IIR y verificación de la convolución por tres métodos (sumatoria, matricial y circular con zero-padding). |
+
 ## Trabajo integrador
 
 [`trabajo-integrador/`](trabajo-integrador) combina los temas de la Guía 1: clasificación morfológica de señales, cuantización, rectificación y cálculo de potencia.
